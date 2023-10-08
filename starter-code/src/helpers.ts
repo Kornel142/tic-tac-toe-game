@@ -8,7 +8,6 @@ export const arraysContainSameElements = function (
   const frequencyCounter1: any = {};
   const frequencyCounter2: any = {};
 
-  // Liczenie częstotliwości występowania elementów w obu tablicach
   for (const element of array1) {
     frequencyCounter1[element] = (frequencyCounter1[element] || 0) + 1;
   }
@@ -17,7 +16,6 @@ export const arraysContainSameElements = function (
     frequencyCounter2[element] = (frequencyCounter2[element] || 0) + 1;
   }
 
-  // Porównywanie częstotliwości występowania elementów
   for (const key in frequencyCounter1) {
     if (!(key in frequencyCounter2)) {
       return false;

@@ -97,22 +97,6 @@ export const loadWinner = function (winner: string) {
   }
 };
 
-// Reset data
-// export const resetData = function () {
-//   state.currentPlayer = PlayerConfig.DEFAULT_PLAYER;
-//   state.firstTurn = PlayerConfig.PLAYER_X;
-//   state.cpuTurn = false;
-//   state.players.player1 = PlayerConfig.PLAYER_O;
-//   state.players.player2 = PlayerConfig.PLAYER_X;
-//   state.game.gameType === GameConfig.DEFAULT;
-//   state.game.playerTurn = GameTurn.DEFAULT_TURN;
-//   state.game.playersWinTurn.O_turn = 0;
-//   state.game.playersWinTurn.X_turn = 0;
-//   state.game.playersWinTurn.ties = 0;
-//   editData();
-//   console.log(state);
-// };
-
 // New Round
 export const newRound = function () {
   chooseFirstTurn();
@@ -160,10 +144,10 @@ export const resetFirstTurn = function () {
       state.currentPlayer = PlayerConfig.PLAYER_O;
       state.game.playerTurn = GameTurn.O_TURN;
       state.cpuTurn = true;
-    } else if(
+    } else if (
       state.firstTurn === PlayerConfig.PLAYER_O &&
       state.players.player1 === PlayerConfig.PLAYER_O
-    )  {
+    ) {
       state.currentPlayer = PlayerConfig.PLAYER_O;
       state.game.playerTurn = GameTurn.O_TURN;
     }

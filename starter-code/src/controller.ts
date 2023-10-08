@@ -7,20 +7,6 @@ import ResetGameView from "./Views/resetGameView";
 import ChoosePlayer from "./Views/choosePlayerView";
 import { checkCondition, findWinBox } from "./helpers";
 
-declare var module: NodeModule & {
-  hot?: {
-    accept(
-      dependencies: string[],
-      callback: (updatedDependencies: any) => void
-    ): void;
-    accept(dependency: string, callback: () => void): void;
-  };
-};
-
-if (module.hot) {
-  module.hot.accept();
-}
-
 // Choose Player
 const controlChoosePlayer = function (player: string) {
   model.loadPlayer(player);
