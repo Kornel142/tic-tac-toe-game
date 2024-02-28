@@ -254,38 +254,38 @@ body {
 
 .board-X:hover {
   cursor: pointer;
-  background-image: url(/assets/icon-x-outline.svg);
+  background-image: url(/starter-code/assets/icon-x-outline.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .board-O:hover {
   cursor: pointer;
-  background-image: url(/assets/icon-o-outline.svg);
+  background-image: url(/starter-code/assets/icon-o-outline.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .selected-by-X {
-  background-image: url(/assets/icon-x.svg);
+  background-image: url(/starter-code/assets/icon-x.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .board-box.selected-by-X:hover {
   cursor: default;
-  background-image: url(/assets/icon-x.svg);
+  background-image: url(/starter-code/assets/icon-x.svg);
 }
 
 .selected-by-O {
-  background-image: url(/assets/icon-o.svg);
+  background-image: url(/starter-code/assets/icon-o.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .board-box.selected-by-O:hover {
   cursor: default;
-  background-image: url(/assets/icon-o.svg);
+  background-image: url(/starter-code/assets/icon-o.svg);
 }
 
 .game-board-footer {
