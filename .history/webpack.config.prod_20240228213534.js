@@ -1,5 +1,5 @@
 const path = require("path");
-const CleanPlugin = require("clean-webpack-plugin");
+
 
 module.exports = {
   mode: "production",
@@ -7,13 +7,14 @@ module.exports = {
   devServer: {
     static: [
       {
-        directory: path.join(__dirname),
+        directory: path.join(dirname),
       },
     ],
   },
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(dirname, "dist"),
+    publicPath: "/dist/",
   },
   module: {
     rules: [
