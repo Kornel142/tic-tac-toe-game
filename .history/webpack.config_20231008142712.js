@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
-  entry: "./src/controller.ts",
+  entry: "./starter-code/src/controller.ts",
   devServer: {
     hot: true,
     static: [
@@ -13,8 +13,8 @@ module.exports = {
   },
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "dist",
+    path: path.resolve(__dirname, "starter-code/dist"),
+    publicPath: "starter-code/dist",
   },
   devtool: "inline-source-map",
   module: {
