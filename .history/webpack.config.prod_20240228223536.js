@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
-  // devtool: "none",
+  devtool: "none",
   module: {
     rules: [
       {
