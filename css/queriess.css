@@ -1,0 +1,96 @@
+/* Tablet */
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 48em) {
+  .new-game {
+    max-width: 46rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 23.5em) {
+  html {
+    font-size: 60%;
+  }
+  .new-game {
+    max-width: 32.7rem;
+  }
+
+  .game-board-section {
+    max-width: 32.8rem;
+    margin: 2rem auto;
+  }
+
+  .game-board-header {
+    justify-content: space-around;
+    width: 32.8rem;
+    gap: 5rem;
+    padding-bottom: 6rem;
+  }
+
+  .gameplay__turn {
+    padding: 1.4rem 1rem;
+    min-width: 7rem;
+  }
+
+  .game-board {
+    max-width: 32.8rem;
+  }
+
+  .board-box {
+    height: 9.6rem;
+    width: 9.6rem;
+  }
+
+  .game-board-footer {
+    max-width: 32.8rem;
+  }
+
+  .counters {
+    min-width: 9.6rem !important;
+    height: 6.4rem;
+  }
+
+  .selected-by-O,
+  .selected-by-X {
+    background-size: 52px 52px;
+  }
+
+  .modal__header__text {
+    font-size: 2.4rem;
+    letter-spacing: 1.5px;
+  }
+
+  .modal__winner-text {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .modal__winner__icon {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .modal-winner-window {
+    gap: 1rem;
+    padding: 0 0;
+    height: 22.8rem;
+  }
+
+  .restart__text {
+    margin-bottom: 0;
+  }
+
+  .btn__left,
+  .btn__right {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .win-X,
+  .win-O {
+    padding: 2.4rem;
+  }
+}
