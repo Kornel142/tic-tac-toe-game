@@ -1,0 +1,30 @@
+{
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.22.10",
+    "@types/webpack-env": "^1.18.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "lite-server": "^2.6.1",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "autobind-decorator": "^2.4.0",
+    "parcel": "^2.9.3",
+    "svg-inline-loader": "^0.8.2"
+  },
+  "main": "controller.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "include": [
+    "/custom.d.ts"
+  ]
+}

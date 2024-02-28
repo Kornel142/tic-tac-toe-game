@@ -15,11 +15,12 @@
     "parcel": "^2.9.3",
     "svg-inline-loader": "^0.8.2"
   },
-  "main": "controller.js",
+  "default": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
-    "build": "webpack --config webpack.config.prod.js"
+    "start": "npm run lite",
+    "lite": "lite-server",
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "keywords": [
     "typescript"
