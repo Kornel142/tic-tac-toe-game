@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/controller.ts",
   devServer: {
     static: [
@@ -13,9 +13,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/dist/",
   },
-  devtool: "inline-source-map",
   module: {
     rules: [
       {
@@ -32,4 +30,5 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".js"],
   },
+  plugins: [new CleanPlugin.CleanWebpackPlugin()],
 };

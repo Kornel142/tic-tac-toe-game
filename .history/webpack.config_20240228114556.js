@@ -4,6 +4,7 @@ module.exports = {
   mode: "development",
   entry: "./src/controller.ts",
   devServer: {
+    hot: true,
     static: [
       {
         directory: path.join(__dirname),
@@ -13,7 +14,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/dist/",
+    publicPath: "/dist/bundle.js",
   },
   devtool: "inline-source-map",
   module: {

@@ -4,6 +4,7 @@ module.exports = {
   mode: "development",
   entry: "./src/controller.ts",
   devServer: {
+    hot: true,
     static: [
       {
         directory: path.join(__dirname),
