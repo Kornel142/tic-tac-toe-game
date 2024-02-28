@@ -1,31 +1,32 @@
 const path = require("path");
 const CleanPlugin = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "production",
-  entry: [path.resolve(__dirname, "src/controller.ts")],
+  entry: [path.resolve(__dirname, "index")],
   devServer: {
-    static: [
-      {
-        directory: path.join(__dirname),
-      },
-    ],
+    contentBase: path.resolve(__dirname, "src"),
+    // static: [
+    //   {
+    //     directory: path.join(__dirname),
+    //   },
+    // ],
   },
   output: {
-    path: path.resolve(__dirname, "/dist"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     publicPath: "/",
   },
-  devtool: "inline-source-map",
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /.ts$/,
         use: "ts-loader",
         exclude: /node_modules/,
       },
       {
-        test: /\.svg$/,
+        test: /.svg$/,
         use: "svg-inline-loader",
       },
     ],

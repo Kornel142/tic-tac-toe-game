@@ -1,8 +1,10 @@
 const path = require("path");
+const CleanPlugin = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-  entry: [path.resolve(__dirname, "src/controller.ts")],
+  mode: "production",
+  entry: [path.resolve(__dirname, "index")],
   devServer: {
     static: [
       {
@@ -19,12 +21,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /.ts$/,
         use: "ts-loader",
         exclude: /node_modules/,
       },
       {
-        test: /\.svg$/,
+        test: /.svg$/,
         use: "svg-inline-loader",
       },
     ],
@@ -32,4 +34,5 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".js"],
   },
+  // plugins: [new CleanPlugin.CleanWebpackPlugin()],
 };

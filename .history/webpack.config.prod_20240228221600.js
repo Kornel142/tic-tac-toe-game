@@ -1,7 +1,8 @@
 const path = require("path");
+const CleanPlugin = require("clean-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: [path.resolve(__dirname, "src/controller.ts")],
   devServer: {
     static: [
@@ -24,7 +25,7 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.svg$/,
+        test: /.svg$/,
         use: "svg-inline-loader",
       },
     ],
@@ -32,4 +33,5 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".js"],
   },
+  // plugins: [new CleanPlugin.CleanWebpackPlugin()],
 };
