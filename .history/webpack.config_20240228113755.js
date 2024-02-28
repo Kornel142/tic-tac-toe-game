@@ -13,8 +13,8 @@ module.exports = {
   },
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist/bundle.js"),
-    publicPath: "/dist/bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/dist/b",
   },
   devtool: "inline-source-map",
   module: {
